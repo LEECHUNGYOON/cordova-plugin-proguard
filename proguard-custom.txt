@@ -108,3 +108,28 @@
 # These clases contain references to cordova webView
 -keep class com.ionicframework.cordova.webview.** {*; }
 -keep class com.ionicframework.cordova.webview.*
+
+
+########################################################
+# Smart ILS 난독화 예외처리 설정 by soccerhs
+########################################################
+
+-dontwarn org.bouncycastle.jsse.BCSSLParameters
+-dontwarn org.bouncycastle.jsse.BCSSLSocket
+-dontwarn org.bouncycastle.jsse.provider.BouncyCastleJsseProvider
+-dontwarn org.conscrypt.Conscrypt$Version
+-dontwarn org.conscrypt.Conscrypt
+-dontwarn org.conscrypt.ConscryptHostnameVerifier
+-dontwarn org.openjsse.javax.net.ssl.SSLParameters
+-dontwarn org.openjsse.javax.net.ssl.SSLSocket
+-dontwarn org.openjsse.net.ssl.OpenJSSE
+
+# SQLite
+-keep class io.sqlc.** { *; }
+-keep class io.liteglue.** { *; }
+
+# USB Serial
+-keep class com.hoho.android.usbserial.** { *; }
+
+# Firebase plugin
+-keep class by.chemerisuk.cordova.firebase.** { *; }
